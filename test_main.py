@@ -7,7 +7,8 @@ client = TestClient(app)
 def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "This is API of light translator application based on opus-mt-ru-en model from Helsinki-NL>"}
+    assert response.json() == {"message": "This is API of light translator application \
+                                based on opus-mt-ru-en model from Helsinki-NL>"}
 
 
 def test_translate_hello():
